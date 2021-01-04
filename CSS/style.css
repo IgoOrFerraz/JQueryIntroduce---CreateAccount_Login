@@ -1,0 +1,85 @@
+/* -----------------------------INICIO BASE --------------------------------- */
+
+body{
+  /* As imagens presentes nesse projeto são memaremente ilustrativas, apenas para fins academicos */
+  background: url("./../imges/bgin.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+#Principal{
+  border: 1px solid black;
+  font-family: Segoe Ui;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+
+#Conteudo-form div input{ margin-top: 10px; }
+#Principal-footer input{ margin-bottom: 5px; }
+
+#Principal-conteudo{
+  border: 1px solid #151515;
+  margin-top: 5%;
+  width: 500px;
+  max-width: 90%;
+  height: 60%;
+
+  background-color: #151515;
+ 
+  border-radius: 25px;
+  box-shadow: black 3px 3px 5px;
+  opacity: 97%;
+}
+
+.conteudo-cabecalho{ 
+  width: 100%; 
+  height: 75px;
+}
+
+.conteudo-cabecalho img{
+  margin-top: -5%;
+  border: 7px solid #151515;
+  width: 350px;
+  height: 96px;
+  border-radius: 25px;
+}
+
+#Conteudo-conteudo{
+  width: 100%;
+  height: 50%;
+}
+
+#Principal-footer{
+  width: 100%;
+  height: 100px;
+}
+
+.hr {
+  border: none;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), white 50%, rgba(255,0,0,0));
+  width: 100%;
+  height: 1px;
+}
+
+/* -----------------------------FIM BASE --------------------------------- */
+
+
+/* -----------------------------INICIO CONTEUDO --------------------------------- */
+
+#Conteudo-form{
+  margin-top: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 50%;
+
+}
+
+#Conteudo-footer{
+  margin-top: 40px;
+  width: 100%;
+  height: auto;
+}
+
+/* -----------------------------FIM CONTEUDO --------------------------------- */
