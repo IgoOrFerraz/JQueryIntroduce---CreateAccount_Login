@@ -9,7 +9,7 @@ $(document).ready(() => {
         $('#Form-login, #Cadastro-pag2, #btn_realcad, #btn_entrar').hide()
         $('#btn_cad, #btn_reset, #Form-cadastro, #Cadastro-pag1, #Conteudo-footer').show()
 
-        $('#Conteudo-titulo').html('CRIAR CADASTRO - Usuário')
+        $('#Conteudo-titulo').html('CADASTRAR - Usuário')
         
         $('#Principal-conteudo').animate({'height': '80%'})
         $('#Conteudo-conteudo').animate({'height' : '65%'})
@@ -17,12 +17,12 @@ $(document).ready(() => {
 
     //Botão Prev/Prox
     $('#btn_prev').on('click', function(){
-        $('#Conteudo-titulo').html('CRIAR CADASTRO - Usuário')
+        $('#Conteudo-titulo').html('CADASTRAR - Usuário')
         $('#Cadastro-pag2').hide()
         $('#Cadastro-pag1, #btn_prox').show()
     })
     $('#btn_prox').on('click', function(){
-        $('#Conteudo-titulo').html('CRIAR CADASTRO - Veículo')
+        $('#Conteudo-titulo').html('CADASTRAR - Veículo')
         $('#Cadastro-pag2, #btn_prev').show()
         $('#Cadastro-pag1').hide()
     })
@@ -129,10 +129,8 @@ class Usuario{
     
     aut_user(){
         
-        let aut_cpf = new RegExp('^[0-9]{3}[.][0-9]{3}[.][0-9]{3}[-][0-9]{2}$')
-        
         // Autenticações futuras devem ser chamadas nesse ambiente através do boolean do if
-        if( aut_cpf.test(this.cpf) && 
+        if( ValidarCPF(this.cpf) && 
             this.nome != '' && 
             this.email != '' &&
             this.senha != ''
@@ -143,6 +141,7 @@ class Usuario{
             return false
         }
     }
+
 }
 
 // ------------------------ CLASSE CONEXÃO ----------------------------- //
@@ -191,5 +190,43 @@ class ConexStorage{
 
     }
     
+}
+
+// ----------------------- VALIDAÇÃO DE CPF ----------------------------//
+
+function ValidarCPF(cpf){
+        
+    let vcpf = cpf
+    let soma = 0
+    let resto = 0
+    let i = 0
+    
+    vcpf = vcpf.replace('.', '').replace('.', '').replace('-', '')
+
+    if(vcpf.length != 11){  return false    }
+    else{
+        for (i = 1; i <= 9; i++) {
+            soma += parseInt(vcpf.substring(i - 1, i)) * (11 - i)
+        }
+        resto = 11 - (soma % 11);
+        if(resto == 11){resto = 0}
+
+        if(resto != vcpf[9]){ return false    }
+        else{
+            resto = 0
+            soma = 0
+
+            for (i = 1; i <= 10; i++) {
+                soma += parseInt(vcpf.substring(i - 1, i)) * (12 - i)
+                
+            }
+            resto = 11 - (soma % 11);
+            if(resto == 11){resto = 0}
+           
+            if(resto == vcpf[10]){
+                return true }
+            else{   return false    }
+        }
+    }
 }
 

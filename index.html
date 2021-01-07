@@ -63,13 +63,13 @@
 
               <div id="Cadastro-pag2">
                 <!-- PÁGINA 2 -->
-                <input type="text" id="cad_placa" class="form-control" placeholder="Digite a Placa do Veículo">
-                <input type="text" id="cad_renavam" class="form-control" placeholder="Digite o Renavam do Veículo">
+                <input type="text" id="cad_placa" class="form-control" placeholder="Digite a Placa do Veículo" maxlength="8" minlength="7">
+                <input type="text" id="cad_renavam" class="form-control" placeholder="Digite o Renavam do Veículo" maxlength="11">
                 <input type="text" id="cad_modelo" class="form-control" placeholder="Digite o Modelo do Veículo">
                 
                 <div class="row justify-content-around row-conteudo">
                   <input type="text" id="cad_marca" class="form-control col-7" placeholder="Marca do Veículo">
-                  <input type="number" id="cad_ano" class="form-control col-2" step="1" min="1900" placeholder="Ano">
+                  <input type="number" id="cad_ano" class="form-control col-2" step="1" min="1900" max="2022" placeholder="Ano">
                 </div>
 
               </div>
@@ -100,7 +100,7 @@
         <div class="hr" style="margin-bottom: 10px;"></div>
 
         <input type="button" id="btn_entrar" class="btn btn-warning form-control block" value="Entrar">
-        <input type="button" id="btn_realcad" class="btn btn-outline-warning form-control block" value="Realizar Cadastrar">
+        <input type="button" id="btn_realcad" class="btn btn-outline-warning form-control block" value="Efetuar Cadastro">
         <input type="button" id="btn_cad" class="btn btn-warning form-control block" value="Cadastrar">
         <input type="button" id="btn_reset" class="btn btn-outline-warning form-control block" value="Voltar" onclick="window.location.href='./index.html'">
       </footer>
