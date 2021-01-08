@@ -1,6 +1,6 @@
 #JQuery Introduce - CreateAccount_Login
 
-- Template de uma tela de Login/ Create Account, utilizando Html5, Css, Bootstrap, Js(DOM, EcmaScript e JQuery)
-- Imagens meramente representativas, apenas buscando harmonia com a estrutura
-- Conhecimento tido base nos cursos Udemy - Desenvolvimento WEB -- https://www.udemy.com/share/101WqGAEMbeVpaRXoB/
-- Objetivo do Projeto é o de demonstrar conhecimento basico em JavaScript
+- Login / Create Account screen template, using Html5, Css, Bootstrap, Js (DOM, EcmaScript and JQuery)
+- Merely representative images, just seeking harmony with the structure
+- Knowledge based on Udemy courses - WEB Development - https://www.udemy.com/share/101WqGAEMbeVpaRXoB/
+- Project objective is to demonstrate basic knowledge in JavaScript
